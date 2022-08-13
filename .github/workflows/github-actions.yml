@@ -43,9 +43,15 @@ jobs:
         PGPASSWORD: postgres
         RAILS_ENV: test
       run: |
-        bin/rails db:migrate
-      run: |
         bin/rails db:setup
+    - name: DB Migrate
+      env:
+        PGHOST: localhost
+        PGUSER: postgres
+        PGPASSWORD: postgres
+        RAILS_ENV: test
+      run: |
+        bin/rails db:migrate
 
     - name: Run Tests
       env:
