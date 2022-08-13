@@ -39,14 +39,14 @@ jobs:
       run: |
         bin/rails db:setup
 
-    - name: Run Tests
+    - name: Run Rspec Tests
       env:
         PGHOST: localhost
         PGUSER: postgres
         PGPASSWORD: postgres
         RAILS_ENV: test
       run: |
-        # bundle exec rake test
-        # bundle exec rake test:system
-        # # or Rspec
         bundle exec rspec
+    - name: Run Yarn Tests
+      run: |
+        yarn && yarn add cypress --dev
