@@ -52,7 +52,7 @@ jobs:
         PGPASSWORD: postgres
         RAILS_ENV: test
       run: |
-        bundle exec rake test
-        bundle exec rake test:system
-        # or Rspec
-        # bundle exec rspec
+        # bundle exec rake test
+        # bundle exec rake test:system
+        # # or Rspec
+        bundle exec rspec
