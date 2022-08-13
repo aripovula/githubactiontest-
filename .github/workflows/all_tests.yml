@@ -2,7 +2,7 @@ name: GitHub Actions Test
 on: [push, pull_request]
 
 jobs:
-  build:
+  rspec_and_yarn_tests:
     runs-on: ubuntu-latest
 
     services:
@@ -54,7 +54,7 @@ jobs:
   cypress-run:
     runs-on: ubuntu-latest
 
-    name: E2E on Chrome
+    name: cypress_E2E_tests_on_Chrome
     steps:
       - uses: actions/checkout@v3
       - uses: cypress-io/github-action@v4
