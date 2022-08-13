@@ -36,14 +36,6 @@ jobs:
       run: |
         sudo apt-get -yqq install libpq-dev
 
-    - name: DB Migrate
-      env:
-        PGHOST: localhost
-        PGUSER: postgres
-        PGPASSWORD: postgres
-        RAILS_ENV: test
-      run: |
-        bin/rails db:migrate
     - name: Build App
       env:
         PGHOST: localhost
