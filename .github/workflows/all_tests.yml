@@ -56,10 +56,10 @@ jobs:
 
     name: cypress_E2E_tests_on_Chrome
     steps:
+      - uses: actions/checkout@v3
       - name: start the Cypress test server
         run: |
           npm start & wait-on http://localhost:5017
-      - uses: actions/checkout@v3
       - uses: cypress-io/github-action@v3
         with:
           browser: chrome
