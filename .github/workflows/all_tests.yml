@@ -57,9 +57,9 @@ jobs:
     name: cypress_E2E_tests_on_Chrome
     steps:
       - uses: actions/checkout@v3
-      - name: start the Cypress test server
-        run: |
-          yarn add wait-on http://localhost:5017
+      # - name: start the Cypress test server
+      #   run: |
+      #     yarn add wait-on http://localhost:5017
       - uses: cypress-io/github-action@v3
         with:
           browser: chrome
