@@ -49,7 +49,7 @@ jobs:
         bundle exec rspec
     - name: Run Yarn Tests
       run: |
-        yarn
+        yarn && yarn test
 
   cypress-run:
     runs-on: ubuntu-latest
@@ -57,6 +57,6 @@ jobs:
     name: cypress_E2E_tests_on_Chrome
     steps:
       - uses: actions/checkout@v3
-      - uses: cypress-io/github-action@v4
+      - uses: cypress-io/github-action
         with:
           browser: chrome
